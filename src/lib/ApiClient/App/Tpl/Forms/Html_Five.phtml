@@ -1,0 +1,24 @@
+<form method="post">
+    <label for="fuel">Fuel level:</label>
+
+    <br>
+    <input type="range" id="fuel" min="0" max="100" value="12">
+
+
+    <br>
+    <meter id="level" min="0" max="100"
+       low="33" high="66" optimum="80" title="12" value="12">@ a/B</meter>
+    <output size="3" id="fuel_level" style="border:1px dotted blue">&nbsp;&nbsp;&nbsp;</output>
+
+    <button>send</button>
+</form>
+<script>
+    const fuelMeter = document.querySelector("#fuel");
+    const levelText = document.querySelector("#fuel_level");
+    const level = document.querySelector("#level");
+    fuelMeter.addEventListener("change", () => {
+        levelText.value = fuelMeter.value;
+        level.value = fuelMeter.value;
+        level.title = fuelMeter.value;
+    });
+</script>

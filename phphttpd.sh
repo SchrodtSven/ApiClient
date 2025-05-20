@@ -1,0 +1,1 @@
+php -S marvell:8023 -t pub router.php > /dev/null  2>&1 &

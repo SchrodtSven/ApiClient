@@ -1,0 +1,7620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" class="" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>
+      comic Vine API Doc
+    </title>
+  </head>
+  <body>
+    <h2 class="header-border">
+      Responses
+    </h2>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td>
+            status_code
+          </td>
+          <td>
+            An integer indicating the result of the request. Acceptable values are:<br />
+            <ul>
+              <li>1:OK
+              </li>
+              <li>100:Invalid API Key
+              </li>
+              <li>101:Object Not Found
+              </li>
+              <li>102:Error in URL Format
+              </li>
+              <li>103:'jsonp' format requires a 'json_callback' argument
+              </li>
+              <li>104:Filter Error
+              </li>
+              <li>105:Subscriber only video is for subscribers only
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            error
+          </td>
+          <td>
+            A text string representing the status_code
+          </td>
+        </tr>
+        <tr>
+          <td>
+            number_of_total_results
+          </td>
+          <td>
+            The number of total results matching the filter conditions specified
+          </td>
+        </tr>
+        <tr>
+          <td>
+            number_of_page_results
+          </td>
+          <td>
+            The number of results on this page
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td>
+            The value of the limit filter specified, or 100 if not specified
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td>
+            The value of the offset filter specified, or 0 if not specified
+          </td>
+        </tr>
+        <tr>
+          <td>
+            results
+          </td>
+          <td>
+            Zero or more items that match the filters specified
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h2 class="header-border">
+      Resources
+    </h2>
+    <h3 class="header-border">
+      character
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /character</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the character is known by. A \n (newline) seperates each alias.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the character detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            birth
+          </td>
+          <td>
+            A date, if one exists, that the character was born on. Not an origin date.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            character_enemies
+          </td>
+          <td>
+            List of characters that are enemies with this character.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            character_friends
+          </td>
+          <td>
+            List of characters that are friends with this character.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            count_of_issue_appearances
+          </td>
+          <td>
+            Number of issues this character appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            creators
+          </td>
+          <td>
+            List of the real life people who created this character.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the character was added to Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the character was last updated on Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the character.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the character.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appeared_in_issue
+          </td>
+          <td>
+            Issue where the character made its first appearance.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            gender
+          </td>
+          <td>
+            Gender of the character. Available options are: Male, Female, Other
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the character.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the character.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            issue_credits
+          </td>
+          <td>
+            List of issues this character appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            issues_died_in
+          </td>
+          <td>
+            List of issues this character died in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            movies
+          </td>
+          <td>
+            Movies the character was in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the character.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            origin
+          </td>
+          <td>
+            The origin of the character. Human, Alien, Robot ...etc
+          </td>
+        </tr>
+        <tr>
+          <td>
+            powers
+          </td>
+          <td>
+            List of super powers a character has.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            publisher
+          </td>
+          <td>
+            The primary publisher a character is attached to.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            real_name
+          </td>
+          <td>
+            Real name of the character.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the character on Giant Bomb.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            story_arc_credits
+          </td>
+          <td>
+            List of story arcs this character appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            team_enemies
+          </td>
+          <td>
+            List of teams that are enemies of this character.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            team_friends
+          </td>
+          <td>
+            List of teams that are friends with this character.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            teams
+          </td>
+          <td>
+            List of teams this character is a member of.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            volume_credits
+          </td>
+          <td>
+            List of comic volumes this character appears in.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      characters
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /characters</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td colspan="3">
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td colspan="3">
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td colspan="3">
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            sort
+          </td>
+          <td colspan="3">
+            The result set can be sorted by the marked fields in the Fields section below. Format: &amp;sort=field:direction where direction is either asc or desc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            filter
+          </td>
+          <td colspan="3">
+            The result can be filtered by the marked fields in the Fields section below.<br />
+            <br />
+            Single filter: &amp;filter=field:value<br />
+            Multiple filters: &amp;filter=field:value,field:value<br />
+            Date filters: &amp;filter=field:start value|end value (using datetime format)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+          <td>
+            Sort
+          </td>
+          <td>
+            Filter
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the character is known by. A \n (newline) seperates each alias.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the character detail resource.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            birth
+          </td>
+          <td>
+            A date, if one exists, that the character was born on. Not an origin date.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            count_of_issue_appearances
+          </td>
+          <td>
+            Number of issues this character appears in.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the character was added to Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the character was last updated on Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the character.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the character.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            first_appeared_in_issue
+          </td>
+          <td>
+            Issue where the character made its first appearance.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            gender
+          </td>
+          <td>
+            Gender of the character. Available options are: Male, Female, Other
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the character.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the character.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the character.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            origin
+          </td>
+          <td>
+            The origin of the character. Human, Alien, Robot ...etc
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            publisher
+          </td>
+          <td>
+            The primary publisher a character is attached to.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            real_name
+          </td>
+          <td>
+            Real name of the character.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the character on Giant Bomb.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      chat
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /chat</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the chat detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            channel_name
+          </td>
+          <td>
+            Name of the video streaming channel associated with the chat.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the chat.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the chat.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            password
+          </td>
+          <td>
+            chat password.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the chat on Giant Bomb.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            title
+          </td>
+          <td>
+            Title of the chat.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      chats
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /chats</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the chat detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            channel_name
+          </td>
+          <td>
+            Name of the video streaming channel associated with the chat.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the chat.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the chat.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            password
+          </td>
+          <td>
+            chat password.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the chat on Giant Bomb.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            title
+          </td>
+          <td>
+            Title of the chat.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      concept
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /concept</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the concept is known by. A \n (newline) seperates each alias.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the concept detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            count_of_issue_appearances
+          </td>
+          <td>
+            Number of issues this concept appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the concept was added to Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the concept was last updated on Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the concept.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the concept.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appeared_in_issue
+          </td>
+          <td>
+            Issue where the concept made its first appearance.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the concept.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the concept.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            issue_credits
+          </td>
+          <td>
+            List of issues this concept appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            movies
+          </td>
+          <td>
+            Movies the concept was in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the concept.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the concept on Giant Bomb.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            start_year
+          </td>
+          <td>
+            The first year this concept appeared in comics.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            volume_credits
+          </td>
+          <td>
+            List of comic volumes this concept appears in.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      concepts
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /concepts</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td colspan="3">
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td colspan="3">
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td colspan="3">
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            sort
+          </td>
+          <td colspan="3">
+            The result set can be sorted by the marked fields in the Fields section below. Format: &amp;sort=field:direction where direction is either asc or desc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            filter
+          </td>
+          <td colspan="3">
+            The result can be filtered by the marked fields in the Fields section below.<br />
+            <br />
+            Single filter: &amp;filter=field:value<br />
+            Multiple filters: &amp;filter=field:value,field:value<br />
+            Date filters: &amp;filter=field:start value|end value (using datetime format)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+          <td>
+            Sort
+          </td>
+          <td>
+            Filter
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the concept is known by. A \n (newline) seperates each alias.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the concept detail resource.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            count_of_issue_appearances
+          </td>
+          <td>
+            Number of issues this concept appears in.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the concept was added to Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the concept was last updated on Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the concept.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the concept.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            first_appeared_in_issue
+          </td>
+          <td>
+            Issue where the concept made its first appearance.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the concept.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the concept.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the concept.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the concept on Giant Bomb.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            start_year
+          </td>
+          <td>
+            The first year this concept appeared in comics.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      episode
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /episode</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the episode is known by. A \n (newline) seperates each alias.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the episode detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            character_credits
+          </td>
+          <td>
+            A list of characters that appear in this episode.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            characters_died_in
+          </td>
+          <td>
+            A list of characters that died in this episode.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            concept_credits
+          </td>
+          <td>
+            A list of concepts that appear in this episode.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            air_date
+          </td>
+          <td>
+            The air date of the episode.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the episode was added to Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the episode was last updated on Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the episode.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the episode.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appearance_characters
+          </td>
+          <td>
+            A list of characters in which this episode is the first appearance of the character.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appearance_concepts
+          </td>
+          <td>
+            A list of concepts in which this episode is the first appearance of the concept.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appearance_locations
+          </td>
+          <td>
+            A list of locations in which this episode is the first appearance of the location.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appearance_objects
+          </td>
+          <td>
+            A list of objects in which this episode is the first appearance of the object.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appearance_storyarcs
+          </td>
+          <td>
+            A list of storyarcs in which this episode is the first appearance of the story arc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appearance_teams
+          </td>
+          <td>
+            A list of teams in which this episode is the first appearance of the team.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            has_staff_review
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the episode.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the episode.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            episode_number
+          </td>
+          <td>
+            The number assigned to the episode within a series.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            location_credits
+          </td>
+          <td>
+            List of locations that appeared in this episode.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the episode.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            object_credits
+          </td>
+          <td>
+            List of objects that appeared in this episode.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            person_credits
+          </td>
+          <td>
+            List of people that worked on this episode.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the episode on Giant Bomb.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            story_arc_credits
+          </td>
+          <td>
+            List of story arcs this episode appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            team_credits
+          </td>
+          <td>
+            List of teams that appear in this episode.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            series
+          </td>
+          <td>
+            The series the episode belongs to.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      episodes
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /episodes</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td colspan="3">
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td colspan="3">
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td colspan="3">
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            sort
+          </td>
+          <td colspan="3">
+            The result set can be sorted by the marked fields in the Fields section below. Format: &amp;sort=field:direction where direction is either asc or desc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            filter
+          </td>
+          <td colspan="3">
+            The result can be filtered by the marked fields in the Fields section below.<br />
+            <br />
+            Single filter: &amp;filter=field:value<br />
+            Multiple filters: &amp;filter=field:value,field:value<br />
+            Date filters: &amp;filter=field:start value|end value (using datetime format)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+          <td>
+            Sort
+          </td>
+          <td>
+            Filter
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the episode is known by. A \n (newline) seperates each alias.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the episode detail resource.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            air_date
+          </td>
+          <td>
+            The air date of the episode.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the episode was added to Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the episode was last updated on Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the episode.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the episode.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            has_staff_review
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the episode.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the episode.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            issue_number
+          </td>
+          <td>
+            The number assigned to the episode within the volume set.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the episode.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the episode on Giant Bomb.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            series
+          </td>
+          <td>
+            The series the episode belongs to.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      issue
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /issue</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the issue is known by. A \n (newline) seperates each alias.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the issue detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            character_credits
+          </td>
+          <td>
+            A list of characters that appear in this issue.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            characters_died_in
+          </td>
+          <td>
+            A list of characters that died in this issue.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            concept_credits
+          </td>
+          <td>
+            A list of concepts that appear in this issue.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            cover_date
+          </td>
+          <td>
+            The publish date printed on the cover of an issue.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the issue was added to Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the issue was last updated on Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the issue.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the issue.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            disbanded_teams
+          </td>
+          <td>
+            A list of teams that disbanded in this issue.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appearance_characters
+          </td>
+          <td>
+            A list of characters in which this issue is the first appearance of the character.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appearance_concepts
+          </td>
+          <td>
+            A list of concepts in which this issue is the first appearance of the concept.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appearance_locations
+          </td>
+          <td>
+            A list of locations in which this issue is the first appearance of the location.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appearance_objects
+          </td>
+          <td>
+            A list of objects in which this issue is the first appearance of the object.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appearance_storyarcs
+          </td>
+          <td>
+            A list of storyarcs in which this issue is the first appearance of the story arc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appearance_teams
+          </td>
+          <td>
+            A list of teams in which this issue is the first appearance of the team.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            has_staff_review
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the issue.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the issue.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            issue_number
+          </td>
+          <td>
+            The number assigned to the issue within the volume set.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            location_credits
+          </td>
+          <td>
+            List of locations that appeared in this issue.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the issue.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            object_credits
+          </td>
+          <td>
+            List of objects that appeared in this issue.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            person_credits
+          </td>
+          <td>
+            List of people that worked on this issue.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the issue on Giant Bomb.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            store_date
+          </td>
+          <td>
+            The date the issue was first sold in stores.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            story_arc_credits
+          </td>
+          <td>
+            List of story arcs this issue appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            team_credits
+          </td>
+          <td>
+            List of teams that appear in this issue.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            teams_disbanded_in
+          </td>
+          <td>
+            List of teams that disbanded in this issue.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            volume
+          </td>
+          <td>
+            The volume this issue is a part of.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      issues
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /issues</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td colspan="3">
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td colspan="3">
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td colspan="3">
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            sort
+          </td>
+          <td colspan="3">
+            The result set can be sorted by the marked fields in the Fields section below. Format: &amp;sort=field:direction where direction is either asc or desc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            filter
+          </td>
+          <td colspan="3">
+            The result can be filtered by the marked fields in the Fields section below.<br />
+            <br />
+            Single filter: &amp;filter=field:value<br />
+            Multiple filters: &amp;filter=field:value,field:value<br />
+            Date filters: &amp;filter=field:start value|end value (using datetime format)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+          <td>
+            Sort
+          </td>
+          <td>
+            Filter
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the issue is known by. A \n (newline) seperates each alias.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the issue detail resource.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            cover_date
+          </td>
+          <td>
+            The publish date printed on the cover of an issue.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the issue was added to Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the issue was last updated on Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the issue.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the issue.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            has_staff_review
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the issue.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the issue.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            issue_number
+          </td>
+          <td>
+            The number assigned to the issue within the volume set.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the issue.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the issue on Giant Bomb.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            store_date
+          </td>
+          <td>
+            The date the issue was first sold in stores.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            volume
+          </td>
+          <td>
+            The volume this issue is a part of.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      location
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /location</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the location is known by. A \n (newline) seperates each alias.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the location detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            count_of_issue_appearances
+          </td>
+          <td>
+            Number of issues this location appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the location was added to Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the location was last updated on Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the location.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the location.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appeared_in_issue
+          </td>
+          <td>
+            Issue where the location made its first appearance.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the location.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the location.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            issue_credits
+          </td>
+          <td>
+            List of issues this location appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            movies
+          </td>
+          <td>
+            Movies the location was in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the location.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the location on Giant Bomb.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            start_year
+          </td>
+          <td>
+            The first year this location appeared in comics.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            story_arc_credits
+          </td>
+          <td>
+            List of story arcs this location appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            volume_credits
+          </td>
+          <td>
+            List of comic volumes this location appears in.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      locations
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /locations</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td colspan="3">
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td colspan="3">
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td colspan="3">
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            sort
+          </td>
+          <td colspan="3">
+            The result set can be sorted by the marked fields in the Fields section below. Format: &amp;sort=field:direction where direction is either asc or desc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            filter
+          </td>
+          <td colspan="3">
+            The result can be filtered by the marked fields in the Fields section below.<br />
+            <br />
+            Single filter: &amp;filter=field:value<br />
+            Multiple filters: &amp;filter=field:value,field:value<br />
+            Date filters: &amp;filter=field:start value|end value (using datetime format)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+          <td>
+            Sort
+          </td>
+          <td>
+            Filter
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the location is known by. A \n (newline) seperates each alias.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the location detail resource.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            count_of_issue_appearances
+          </td>
+          <td>
+            Number of issues this location appears in.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the location was added to Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the location was last updated on Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the location.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the location.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            first_appeared_in_issue
+          </td>
+          <td>
+            Issue where the location made its first appearance.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the location.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the location.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the location.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the location on Giant Bomb.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            start_year
+          </td>
+          <td>
+            The first year this location appeared in comics.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      movie
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /movie</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the movie detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            box_office_revenue
+          </td>
+          <td>
+            The total revenue made in the box offices for this movie.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            budget
+          </td>
+          <td>
+            The cost of making this movie.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            characters
+          </td>
+          <td>
+            Characters related to the movie.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            concepts
+          </td>
+          <td>
+            Concepts related to the movie.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the movie was added to Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the movie was last updated on Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the movie.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the movie.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            distributor
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            has_staff_review
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the movie.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the movie.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            locations
+          </td>
+          <td>
+            Locations related to the movie.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the movie.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            producers
+          </td>
+          <td>
+            The producers of this movie.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            rating
+          </td>
+          <td>
+            The rating of this movie.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            release_date
+          </td>
+          <td>
+            Date of the movie.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            runtime
+          </td>
+          <td>
+            The length of this movie.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the movie on Giant Bomb.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            studios
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            teams
+          </td>
+          <td>
+            List of teams this movie is a member of.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            things
+          </td>
+          <td>
+            List of things found in this movie.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            total_revenue
+          </td>
+          <td>
+            Total revenue generated by this movie.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            writers
+          </td>
+          <td>
+            Writers for this movie.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      movies
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /movies</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td colspan="3">
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td colspan="3">
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td colspan="3">
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            sort
+          </td>
+          <td colspan="3">
+            The result set can be sorted by the marked fields in the Fields section below. Format: &amp;sort=field:direction where direction is either asc or desc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            filter
+          </td>
+          <td colspan="3">
+            The result can be filtered by the marked fields in the Fields section below.<br />
+            <br />
+            Single filter: &amp;filter=field:value<br />
+            Multiple filters: &amp;filter=field:value,field:value<br />
+            Date filters: &amp;filter=field:start value|end value (using datetime format)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+          <td>
+            Sort
+          </td>
+          <td>
+            Filter
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the movie detail resource.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            box_office_revenue
+          </td>
+          <td>
+            The total revenue made in the box offices for this movie.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            budget
+          </td>
+          <td>
+            The cost of making this movie.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the movie was added to Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the movie was last updated on Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the movie.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the movie.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            distributor
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            has_staff_review
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the movie.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the movie.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the movie.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            producers
+          </td>
+          <td>
+            The producers of this movie.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            rating
+          </td>
+          <td>
+            The rating of this movie.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            release_date
+          </td>
+          <td>
+            Date of the movie.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            runtime
+          </td>
+          <td>
+            The length of this movie.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the movie on Giant Bomb.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            studios
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            total_revenue
+          </td>
+          <td>
+            Total revenue generated by this movie.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            writers
+          </td>
+          <td>
+            Writers for this movie.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      object
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /object</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the object is known by. A \n (newline) seperates each alias.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the object detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            count_of_issue_appearances
+          </td>
+          <td>
+            Number of issues this object appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the object was added to Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the object was last updated on Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the object.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the object.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appeared_in_issue
+          </td>
+          <td>
+            Issue where the object made its first appearance.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the object.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the object.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            issue_credits
+          </td>
+          <td>
+            List of issues this object appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            movies
+          </td>
+          <td>
+            Movies the object was in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the object.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the object on Giant Bomb.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            start_year
+          </td>
+          <td>
+            The first year this object appeared in comics.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            story_arc_credits
+          </td>
+          <td>
+            List of story arcs this object appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            volume_credits
+          </td>
+          <td>
+            List of comic volumes this object appears in.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      objects
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /objects</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td colspan="3">
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td colspan="3">
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td colspan="3">
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            sort
+          </td>
+          <td colspan="3">
+            The result set can be sorted by the marked fields in the Fields section below. Format: &amp;sort=field:direction where direction is either asc or desc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            filter
+          </td>
+          <td colspan="3">
+            The result can be filtered by the marked fields in the Fields section below.<br />
+            <br />
+            Single filter: &amp;filter=field:value<br />
+            Multiple filters: &amp;filter=field:value,field:value<br />
+            Date filters: &amp;filter=field:start value|end value (using datetime format)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+          <td>
+            Sort
+          </td>
+          <td>
+            Filter
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the object is known by. A \n (newline) seperates each alias.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the object detail resource.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            count_of_issue_appearances
+          </td>
+          <td>
+            Number of issues this object appears in.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the object was added to Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the object was last updated on Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the object.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the object.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            first_appeared_in_issue
+          </td>
+          <td>
+            Issue where the object made its first appearance.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the object.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the object.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the object.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the object on Giant Bomb.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            start_year
+          </td>
+          <td>
+            The first year this object appeared in comics.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      origin
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /origin</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the origin detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            character_set
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the origin.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the origin.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            profiles
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the origin on Giant Bomb.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      origins
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /origins</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td colspan="3">
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td colspan="3">
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td colspan="3">
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            sort
+          </td>
+          <td colspan="3">
+            The result set can be sorted by the marked fields in the Fields section below. Format: &amp;sort=field:direction where direction is either asc or desc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            filter
+          </td>
+          <td colspan="3">
+            The result can be filtered by the marked fields in the Fields section below.<br />
+            <br />
+            Single filter: &amp;filter=field:value<br />
+            Multiple filters: &amp;filter=field:value,field:value<br />
+            Date filters: &amp;filter=field:start value|end value (using datetime format)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+          <td>
+            Sort
+          </td>
+          <td>
+            Filter
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the origin detail resource.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the origin.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the origin.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the origin on Giant Bomb.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      person
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /person</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the person is known by. A \n (newline) seperates each alias.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the person detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            birth
+          </td>
+          <td>
+            A date, if one exists, that the person was born on. Not an origin date.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            count_of_issue_appearances
+          </td>
+          <td>
+            Number of issues this person appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            country
+          </td>
+          <td>
+            Country the person resides in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            created_characters
+          </td>
+          <td>
+            Comic characters this person created.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the person was added to Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the person was last updated on Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            death
+          </td>
+          <td>
+            Date this person died on.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the person.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the person.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            email
+          </td>
+          <td>
+            The email of this person.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            gender
+          </td>
+          <td>
+            Gender of the person. Available options are: Male, Female, Other
+          </td>
+        </tr>
+        <tr>
+          <td>
+            hometown
+          </td>
+          <td>
+            City or town the person resides in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the person.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the person.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            issue_credits
+          </td>
+          <td>
+            List of issues this person appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the person.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the person on Giant Bomb.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            story_arc_credits
+          </td>
+          <td>
+            List of story arcs this person appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            volume_credits
+          </td>
+          <td>
+            List of comic volumes this person appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            website
+          </td>
+          <td>
+            URL to the person website.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      people
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /people</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td colspan="3">
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td colspan="3">
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td colspan="3">
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            sort
+          </td>
+          <td colspan="3">
+            The result set can be sorted by the marked fields in the Fields section below. Format: &amp;sort=field:direction where direction is either asc or desc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            filter
+          </td>
+          <td colspan="3">
+            The result can be filtered by the marked fields in the Fields section below.<br />
+            <br />
+            Single filter: &amp;filter=field:value<br />
+            Multiple filters: &amp;filter=field:value,field:value<br />
+            Date filters: &amp;filter=field:start value|end value (using datetime format)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+          <td>
+            Sort
+          </td>
+          <td>
+            Filter
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the person is known by. A \n (newline) seperates each alias.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the person detail resource.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            birth
+          </td>
+          <td>
+            A date, if one exists, that the person was born on. Not an origin date.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            count_of_issue_appearances
+          </td>
+          <td>
+            Number of issues this person appears in.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            country
+          </td>
+          <td>
+            Country the person resides in.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the person was added to Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the person was last updated on Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            death
+          </td>
+          <td>
+            Date this person died on.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the person.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the person.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            email
+          </td>
+          <td>
+            The email of this person.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            gender
+          </td>
+          <td>
+            Gender of the person. Available options are: Male, Female, Other
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            hometown
+          </td>
+          <td>
+            City or town the person resides in.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the person.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the person.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the person.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the person on Giant Bomb.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            website
+          </td>
+          <td>
+            URL to the person website.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      power
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /power</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the power is known by. A \n (newline) seperates each alias.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the power detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            characters
+          </td>
+          <td>
+            Characters related to the power.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the power was added to Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the power was last updated on Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the power.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the power.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the power.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the power on Giant Bomb.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      powers
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /powers</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td colspan="3">
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td colspan="3">
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td colspan="3">
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            sort
+          </td>
+          <td colspan="3">
+            The result set can be sorted by the marked fields in the Fields section below. Format: &amp;sort=field:direction where direction is either asc or desc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            filter
+          </td>
+          <td colspan="3">
+            The result can be filtered by the marked fields in the Fields section below.<br />
+            <br />
+            Single filter: &amp;filter=field:value<br />
+            Multiple filters: &amp;filter=field:value,field:value<br />
+            Date filters: &amp;filter=field:start value|end value (using datetime format)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+          <td>
+            Sort
+          </td>
+          <td>
+            Filter
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the power is known by. A \n (newline) seperates each alias.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the power detail resource.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the power was added to Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the power was last updated on Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the power.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the power.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the power.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the power on Giant Bomb.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      promo
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /promo</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the promo detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the promo was added to Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the promo.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the promo.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the promo.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            link
+          </td>
+          <td>
+            The link that promo points to.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the promo.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            resource_type
+          </td>
+          <td>
+            The type of resource the promo is pointing towards.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            user
+          </td>
+          <td>
+            Author of the promo.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      promos
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /promos</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td colspan="3">
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td colspan="3">
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td colspan="3">
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            sort
+          </td>
+          <td colspan="3">
+            The result set can be sorted by the marked fields in the Fields section below. Format: &amp;sort=field:direction where direction is either asc or desc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            filter
+          </td>
+          <td colspan="3">
+            The result can be filtered by the marked fields in the Fields section below.<br />
+            <br />
+            Single filter: &amp;filter=field:value<br />
+            Multiple filters: &amp;filter=field:value,field:value<br />
+            Date filters: &amp;filter=field:start value|end value (using datetime format)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+          <td>
+            Sort
+          </td>
+          <td>
+            Filter
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the promo detail resource.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the promo was added to Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the promo.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the promo.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the promo.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            link
+          </td>
+          <td>
+            The link that promo points to.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the promo.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            resource_type
+          </td>
+          <td>
+            The type of resource the promo is pointing towards.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            user
+          </td>
+          <td>
+            Author of the promo.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      publisher
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /publisher</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the publisher is known by. A \n (newline) seperates each alias.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the publisher detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            characters
+          </td>
+          <td>
+            Characters related to the publisher.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the publisher was added to Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the publisher was last updated on Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the publisher.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the publisher.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the publisher.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the publisher.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            location_address
+          </td>
+          <td>
+            Street address of the publisher.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            location_city
+          </td>
+          <td>
+            City the publisher resides in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            location_state
+          </td>
+          <td>
+            State the publisher resides in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the publisher.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the publisher on Giant Bomb.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            story_arcs
+          </td>
+          <td>
+            List of story arcs tied to this publisher.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            teams
+          </td>
+          <td>
+            List of teams this publisher is a member of.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            volumes
+          </td>
+          <td>
+            List of volumes this publisher has put out.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      publishers
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /publishers</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td colspan="3">
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td colspan="3">
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td colspan="3">
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            sort
+          </td>
+          <td colspan="3">
+            The result set can be sorted by the marked fields in the Fields section below. Format: &amp;sort=field:direction where direction is either asc or desc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            filter
+          </td>
+          <td colspan="3">
+            The result can be filtered by the marked fields in the Fields section below.<br />
+            <br />
+            Single filter: &amp;filter=field:value<br />
+            Multiple filters: &amp;filter=field:value,field:value<br />
+            Date filters: &amp;filter=field:start value|end value (using datetime format)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+          <td>
+            Sort
+          </td>
+          <td>
+            Filter
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the publisher is known by. A \n (newline) seperates each alias.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the publisher detail resource.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the publisher was added to Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the publisher was last updated on Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the publisher.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the publisher.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the publisher.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the publisher.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            location_address
+          </td>
+          <td>
+            Street address of the publisher.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            location_city
+          </td>
+          <td>
+            City the publisher resides in.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            location_state
+          </td>
+          <td>
+            State the publisher resides in.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the publisher.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the publisher on Giant Bomb.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      series
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /series</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the series is known by. A \n (newline) seperates each alias.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the series detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            character_credits
+          </td>
+          <td>
+            A list of characters that appear in this series.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            count_of_episodes
+          </td>
+          <td>
+            Number of episodes included in this series.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the series was added to Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the series was last updated on Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the series.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the series.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_episode
+          </td>
+          <td>
+            The first episode in this series.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the series.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the series.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            last_episode
+          </td>
+          <td>
+            The last episode in this series.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            location_credits
+          </td>
+          <td>
+            List of locations that appeared in this series.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the series.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            publisher
+          </td>
+          <td>
+            The primary publisher a series is attached to.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the series on Giant Bomb.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            start_year
+          </td>
+          <td>
+            The first year this series appeared in comics.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      series_list
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /series_list</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td colspan="3">
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td colspan="3">
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td colspan="3">
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            sort
+          </td>
+          <td colspan="3">
+            The result set can be sorted by the marked fields in the Fields section below. Format: &amp;sort=field:direction where direction is either asc or desc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            filter
+          </td>
+          <td colspan="3">
+            The result can be filtered by the marked fields in the Fields section below.<br />
+            <br />
+            Single filter: &amp;filter=field:value<br />
+            Multiple filters: &amp;filter=field:value,field:value<br />
+            Date filters: &amp;filter=field:start value|end value (using datetime format)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+          <td>
+            Sort
+          </td>
+          <td>
+            Filter
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the series_list is known by. A \n (newline) seperates each alias.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the series_list detail resource.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            count_of_episodes
+          </td>
+          <td>
+            Number of episodes included in this series_list.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the series_list was added to Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the series_list was last updated on Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the series_list.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the series_list.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            first_episode
+          </td>
+          <td>
+            The first episode in this series_list.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the series_list.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the series_list.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            last_episode
+          </td>
+          <td>
+            The last episode in this series_list.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the series_list.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            publisher
+          </td>
+          <td>
+            The primary publisher a series_list is attached to.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the series_list on Giant Bomb.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            start_year
+          </td>
+          <td>
+            The first year this series_list appeared in comics.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      search
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /search</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_key
+          </td>
+          <td>
+            Your API Key
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td>
+            The number of results to display per page. This value defaults to 10 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td>
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            query
+          </td>
+          <td>
+            The search string.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            resources
+          </td>
+          <td>
+            List of resources to filter results. This filter can accept multiple arguments, each delimited with a ",". Available options are:<br />
+            <ul>
+              <li>character
+              </li>
+              <li>concept
+              </li>
+              <li>origin
+              </li>
+              <li>object
+              </li>
+              <li>location
+              </li>
+              <li>issue
+              </li>
+              <li>story_arc
+              </li>
+              <li>volume
+              </li>
+              <li>publisher
+              </li>
+              <li>person
+              </li>
+              <li>team
+              </li>
+              <li>video
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            subscriber_only
+          </td>
+          <td>
+            NEED DESCRIPTION
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            resource_type
+          </td>
+          <td>
+            The type of resource the result is mapped to. Available options are:<br />
+            <ul>
+              <li>character
+              </li>
+              <li>concept
+              </li>
+              <li>origin
+              </li>
+              <li>object
+              </li>
+              <li>location
+              </li>
+              <li>issue
+              </li>
+              <li>story_arc
+              </li>
+              <li>volume
+              </li>
+              <li>publisher
+              </li>
+              <li>person
+              </li>
+              <li>team
+              </li>
+              <li>video
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      story_arc
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /story_arc</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the story_arc is known by. A \n (newline) seperates each alias.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the story_arc detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            count_of_issue_appearances
+          </td>
+          <td>
+            Number of issues this story_arc appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the story_arc was added to Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the story_arc was last updated on Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the story_arc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the story_arc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appeared_in_issue
+          </td>
+          <td>
+            Issue where the story_arc made its first appearance.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the story_arc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the story_arc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            issues
+          </td>
+          <td>
+            List of issues included in this story_arc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            movies
+          </td>
+          <td>
+            Movies the story_arc was in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the story_arc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            publisher
+          </td>
+          <td>
+            The primary publisher a story_arc is attached to.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the story_arc on Giant Bomb.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      story_arcs
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /story_arcs</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td colspan="3">
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td colspan="3">
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td colspan="3">
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            sort
+          </td>
+          <td colspan="3">
+            The result set can be sorted by the marked fields in the Fields section below. Format: &amp;sort=field:direction where direction is either asc or desc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            filter
+          </td>
+          <td colspan="3">
+            The result can be filtered by the marked fields in the Fields section below.<br />
+            <br />
+            Single filter: &amp;filter=field:value<br />
+            Multiple filters: &amp;filter=field:value,field:value<br />
+            Date filters: &amp;filter=field:start value|end value (using datetime format)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+          <td>
+            Sort
+          </td>
+          <td>
+            Filter
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the story_arc is known by. A \n (newline) seperates each alias.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the story_arc detail resource.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            count_of_issue_appearances
+          </td>
+          <td>
+            Number of issues this story_arc appears in.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the story_arc was added to Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the story_arc was last updated on Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the story_arc.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the story_arc.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            first_appeared_in_issue
+          </td>
+          <td>
+            Issue where the story_arc made its first appearance.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the story_arc.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the story_arc.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the story_arc.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            publisher
+          </td>
+          <td>
+            The primary publisher a story_arc is attached to.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the story_arc on Giant Bomb.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      team
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /team</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the team is known by. A \n (newline) seperates each alias.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the team detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            character_enemies
+          </td>
+          <td>
+            List of characters that are enemies with this team.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            character_friends
+          </td>
+          <td>
+            List of characters that are friends with this team.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            characters
+          </td>
+          <td>
+            Characters related to the team.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            count_of_issue_appearances
+          </td>
+          <td>
+            Number of issues this team appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            count_of_team_members
+          </td>
+          <td>
+            Number of team members in this team.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the team was added to Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the team was last updated on Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the team.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the team.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            disbanded_in_issues
+          </td>
+          <td>
+            List of issues this team disbanded in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_appeared_in_issue
+          </td>
+          <td>
+            Issue where the team made its first appearance.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the team.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the team.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            issue_credits
+          </td>
+          <td>
+            List of issues this team appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            issues_disbanded_in
+          </td>
+          <td>
+            List of issues this team disbanded in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            movies
+          </td>
+          <td>
+            Movies the team was in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the team.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            publisher
+          </td>
+          <td>
+            The primary publisher a team is attached to.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the team on Giant Bomb.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            story_arc_credits
+          </td>
+          <td>
+            List of story arcs this team appears in.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            volume_credits
+          </td>
+          <td>
+            List of comic volumes this team appears in.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      teams
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /teams</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td colspan="3">
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td colspan="3">
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td colspan="3">
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            sort
+          </td>
+          <td colspan="3">
+            The result set can be sorted by the marked fields in the Fields section below. Format: &amp;sort=field:direction where direction is either asc or desc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            filter
+          </td>
+          <td colspan="3">
+            The result can be filtered by the marked fields in the Fields section below.<br />
+            <br />
+            Single filter: &amp;filter=field:value<br />
+            Multiple filters: &amp;filter=field:value,field:value<br />
+            Date filters: &amp;filter=field:start value|end value (using datetime format)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+          <td>
+            Sort
+          </td>
+          <td>
+            Filter
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the team is known by. A \n (newline) seperates each alias.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the team detail resource.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            count_of_issue_appearances
+          </td>
+          <td>
+            Number of issues this team appears in.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            count_of_team_members
+          </td>
+          <td>
+            Number of team members in this team.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the team was added to Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the team was last updated on Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the team.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the team.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            first_appeared_in_issue
+          </td>
+          <td>
+            Issue where the team made its first appearance.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the team.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the team.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the team.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            publisher
+          </td>
+          <td>
+            The primary publisher a team is attached to.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the team on Giant Bomb.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      types
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /types</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            detail_resource_name
+          </td>
+          <td>
+            The name of the type's detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the type.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            list_resource_name
+          </td>
+          <td>
+            The name of the type's list resource.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      video
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /video</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the video detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the video.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            hd_url
+          </td>
+          <td>
+            URL to the HD version of the video.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            high_url
+          </td>
+          <td>
+            URL to the High Res version of the video.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the video.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the video.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            length_seconds
+          </td>
+          <td>
+            Length (in seconds) of the video.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            low_url
+          </td>
+          <td>
+            URL to the Low Res version of the video.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the video.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            publish_date
+          </td>
+          <td>
+            Date the video was published on Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the video on Giant Bomb.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            url
+          </td>
+          <td>
+            The video's filename.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            user
+          </td>
+          <td>
+            Author of the video.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      videos
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /videos</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_key
+          </td>
+          <td colspan="3">
+            Your API Key
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td colspan="3">
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td colspan="3">
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td colspan="3">
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            sort
+          </td>
+          <td colspan="3">
+            The result set can be sorted by the marked fields in the Fields section below. Format: &amp;sort=field:direction where direction is either asc or desc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            subscriber_only
+          </td>
+          <td colspan="3">
+            NEED DESCRIPTION
+          </td>
+        </tr>
+        <tr>
+          <td>
+            video_type
+          </td>
+          <td colspan="3">
+            Filters results by video_type. The value passed to this filter should be the ID of the video_type to filter results by.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            filter
+          </td>
+          <td colspan="3">
+            The result can be filtered by the marked fields in the Fields section below.<br />
+            <br />
+            Single filter: &amp;filter=field:value<br />
+            Multiple filters: &amp;filter=field:value,field:value<br />
+            Date filters: &amp;filter=field:start value|end value (using datetime format)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+          <td>
+            Sort
+          </td>
+          <td>
+            Filter
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the video detail resource.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the video.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            hd_url
+          </td>
+          <td>
+            URL to the HD version of the video.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            high_url
+          </td>
+          <td>
+            URL to the High Res version of the video.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the video.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the video.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            length_seconds
+          </td>
+          <td>
+            Length (in seconds) of the video.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            low_url
+          </td>
+          <td>
+            URL to the Low Res version of the video.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the video.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            publish_date
+          </td>
+          <td>
+            Date the video was published on Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the video on Giant Bomb.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            url
+          </td>
+          <td>
+            The video's filename.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            user
+          </td>
+          <td>
+            Author of the video.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      video_type
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /video_type</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the video_type detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the video_type.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the video_type.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the video_type.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the video_type on Giant Bomb.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      video_types
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /video_types</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td>
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td>
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the video_type detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the video_type.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the video_type.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the video_type.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the video_type on Giant Bomb.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      video_category
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /video_category</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the video_category detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the video_category.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the video_category.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the video_category.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the video_category on Giant Bomb.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      video_categories
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /video_categories</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td>
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td>
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the video_category detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the video_category.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the video_category.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the video_category.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the video_category on Giant Bomb.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      volume
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /volume</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td>
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the volume is known by. A \n (newline) seperates each alias.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the volume detail resource.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            character_credits
+          </td>
+          <td>
+            A list of characters that appear in this volume.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            concept_credits
+          </td>
+          <td>
+            A list of concepts that appear in this volume.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            count_of_issues
+          </td>
+          <td>
+            Number of issues included in this volume.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the volume was added to Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the volume was last updated on Comic Vine.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the volume.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the volume.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            first_issue
+          </td>
+          <td>
+            The first issue in this volume.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the volume.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the volume.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            last_issue
+          </td>
+          <td>
+            The last issue in this volume.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            location_credits
+          </td>
+          <td>
+            List of locations that appeared in this volume.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the volume.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            object_credits
+          </td>
+          <td>
+            List of objects that appeared in this volume.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            person_credits
+          </td>
+          <td>
+            List of people that worked on this volume.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            publisher
+          </td>
+          <td>
+            The primary publisher a volume is attached to.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the volume on Giant Bomb.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            start_year
+          </td>
+          <td>
+            The first year this volume appeared in comics.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            team_credits
+          </td>
+          <td>
+            List of teams that appear in this volume.
+          </td>
+        </tr>
+      </tbody>
+    </table><br />
+    <h3 class="header-border">
+      volumes
+    </h3>
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <strong>URL: /volumes</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            Filters
+          </td>
+        </tr>
+        <tr>
+          <td>
+            format
+          </td>
+          <td colspan="3">
+            The data format of the response takes either xml, json, or jsonp.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            field_list
+          </td>
+          <td colspan="3">
+            List of field names to include in the response. Use this if you want to reduce the size of the response payload. This filter can accept multiple arguments, each delimited with a ","
+          </td>
+        </tr>
+        <tr>
+          <td>
+            limit
+          </td>
+          <td colspan="3">
+            The number of results to display per page. This value defaults to 100 and can not exceed this number.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            offset
+          </td>
+          <td colspan="3">
+            Return results starting with the object at the offset specified.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            sort
+          </td>
+          <td colspan="3">
+            The result set can be sorted by the marked fields in the Fields section below. Format: &amp;sort=field:direction where direction is either asc or desc.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            filter
+          </td>
+          <td colspan="3">
+            The result can be filtered by the marked fields in the Fields section below.<br />
+            <br />
+            Single filter: &amp;filter=field:value<br />
+            Multiple filters: &amp;filter=field:value,field:value<br />
+            Date filters: &amp;filter=field:start value|end value (using datetime format)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Fields
+          </td>
+          <td>
+            Sort
+          </td>
+          <td>
+            Filter
+          </td>
+        </tr>
+        <tr>
+          <td>
+            aliases
+          </td>
+          <td>
+            List of aliases the volume is known by. A \n (newline) seperates each alias.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            api_detail_url
+          </td>
+          <td>
+            URL pointing to the volume detail resource.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            count_of_issues
+          </td>
+          <td>
+            Number of issues included in this volume.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_added
+          </td>
+          <td>
+            Date the volume was added to Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            date_last_updated
+          </td>
+          <td>
+            Date the volume was last updated on Comic Vine.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            deck
+          </td>
+          <td>
+            Brief summary of the volume.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            description
+          </td>
+          <td>
+            Description of the volume.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            first_issue
+          </td>
+          <td>
+            The first issue in this volume.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            id
+          </td>
+          <td>
+            Unique ID of the volume.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            image
+          </td>
+          <td>
+            Main image of the volume.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            last_issue
+          </td>
+          <td>
+            The last issue in this volume.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            name
+          </td>
+          <td>
+            Name of the volume.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            publisher
+          </td>
+          <td>
+            The primary publisher a volume is attached to.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            site_detail_url
+          </td>
+          <td>
+            URL pointing to the volume on Giant Bomb.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            start_year
+          </td>
+          <td>
+            The first year this volume appeared in comics.
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br />
+  </body>
+</html>

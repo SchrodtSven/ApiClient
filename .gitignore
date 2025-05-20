@@ -1,0 +1,12 @@
+# Local stuff
+.phpunit.cache/
+form.*
+_vendor
+composer.phar
+vendor/
+phpunit
+dox/
+pub/
+ .DS_Store
+ .vs_code
+

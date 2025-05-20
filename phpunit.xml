@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" stopOnFailure="false" stopOnError="false" bootstrap="src/lib/ApiClient/Autoload.php" colors="true" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.2/phpunit.xsd" cacheDirectory=".phpunit.cache">
+  <coverage/>
+  <testsuites>
+    <testsuite name="Testing ApiClient stuff">
+      <directory>./test/</directory>
+    </testsuite>
+  </testsuites>
+  <source>
+    <include>
+      <directory>./</directory>
+    </include>
+    <exclude>
+      <directory>./public</directory>
+    </exclude>
+  </source>
+</phpunit>

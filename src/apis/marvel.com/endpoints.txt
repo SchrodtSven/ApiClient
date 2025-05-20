@@ -1,0 +1,42 @@
+/v1/public/characters Fetches lists of characters.
+/v1/public/characters/{characterId} Fetches a single character by id.
+/v1/public/characters/{characterId}/comics Fetches lists of comics filtered by a character id.
+/v1/public/characters/{characterId}/events Fetches lists of events filtered by a character id.
+/v1/public/characters/{characterId}/series Fetches lists of series filtered by a character id.
+/v1/public/characters/{characterId}/stories Fetches lists of stories filtered by a character id.
+/v1/public/comics Fetches lists of comics.
+/v1/public/comics/{comicId} Fetches a single comic by id.
+/v1/public/comics/{comicId}/characters Fetches lists of characters filtered by a comic id.
+/v1/public/comics/{comicId}/creators Fetches lists of creators filtered by a comic id.
+/v1/public/comics/{comicId}/events Fetches lists of events filtered by a comic id.
+/v1/public/comics/{comicId}/stories Fetches lists of stories filtered by a comic id.
+/v1/public/creators Fetches lists of creators.
+/v1/public/creators/{creatorId} Fetches a single creator by id.
+/v1/public/creators/{creatorId}/comics Fetches lists of comics filtered by a creator id.
+/v1/public/creators/{creatorId}/events Fetches lists of events filtered by a creator id.
+/v1/public/creators/{creatorId}/series Fetches lists of series filtered by a creator id.
+/v1/public/creators/{creatorId}/stories Fetches lists of stories filtered by a creator id.
+/v1/public/events Fetches lists of events.
+/v1/public/events/{eventId} Fetches a single event by id.
+/v1/public/events/{eventId}/characters Fetches lists of characters filtered by an event id.
+/v1/public/events/{eventId}/comics Fetches lists of comics filtered by an event id.
+/v1/public/events/{eventId}/creators Fetches lists of creators filtered by an event id.
+/v1/public/events/{eventId}/series Fetches lists of series filtered by an event id.
+/v1/public/events/{eventId}/stories Fetches lists of stories filtered by an event id.
+/v1/public/series Fetches lists of series.
+/v1/public/series/{seriesId} Fetches a single comic series by id.
+/v1/public/series/{seriesId}/characters Fetches lists of characters filtered by a series id.
+/v1/public/series/{seriesId}/comics Fetches lists of comics filtered by a series id.
+/v1/public/series/{seriesId}/creators Fetches lists of creators filtered by a series id.
+/v1/public/series/{seriesId}/events Fetches lists of events filtered by a series id.
+/v1/public/series/{seriesId}/stories Fetches lists of stories filtered by a series id.
+/v1/public/stories Fetches lists of stories.
+/v1/public/stories/{storyId} Fetches a single comic story by id.
+/v1/public/stories/{storyId}/characters Fetches lists of characters filtered by a story id.
+/v1/public/stories/{storyId}/comics Fetches lists of comics filtered by a story id.
+/v1/public/stories/{storyId}/creators Fetches lists of creators filtered by a story id.
+/v1/public/stories/{storyId}/events Fetches lists of events filtered by a story id.
+/v1/public/stories/{storyId}/series Fetches lists of series filtered by a story id.
+/v1/public/stories/{storyId}/series Fetches lists of series filtered by a story id.
+/v1/public/stories/{storyId}/series Fetches lists of series filtered by a story id.
+/v1/public/stories/{storyId}/series Fetches lists of series filtered by a story id.

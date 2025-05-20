@@ -1,0 +1,12 @@
+<h2> Forms Doclet example</h2>
+<!-- Form which will send a POST request to the current URL -->
+<form method="post">
+  <label for="first_name">Your first name:
+    <input name="first_name" list="first_names" />
+  </label>
+  <?= $this->renderDoclet('Forms/Datalist.first'); ?>
+  <button>Save</button>
+</form>
+
+<!-- Form which will send a POST request to the current URL -->
+<?= $this->renderDoclet('Forms/Slider'); ?>
