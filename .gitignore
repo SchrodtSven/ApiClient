@@ -3,6 +3,7 @@ _vendor
 
 # Local stuff
 .phpunit.cache/
+tmp/
 form.*
 composer.phar
 vendor/
