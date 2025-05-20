@@ -3,6 +3,13 @@
 Tiny library for consuming (mainly HTTP based) APIs for PHP 8.4+ 
 - FE+BE (ECMAScript based)
 
+## Architecture
+
+## Persistence layer(s)
+
+
+
+
 ## Sub namespace PHalfAsleep
 
 Will be moved to PHibernate

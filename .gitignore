@@ -1,12 +1,14 @@
+#n weird stuff
+_vendor
+
 # Local stuff
 .phpunit.cache/
 form.*
-_vendor
 composer.phar
 vendor/
 phpunit
 dox/
 pub/
- .DS_Store
- .vs_code
+.DS_Store
+.vs_code
 

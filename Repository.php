@@ -6,7 +6,7 @@
  * @package ApiClient
  * @author  Sven Schrodt <sven@schrodt.club>
  * @version 0.1
- * @since 2025-01-10
+ * @since 2025-05-20
  * @link https://github.com/SchrodtSven/ApiClient
  */
 

@@ -1,5 +1,13 @@
 <?php
-
+/**
+ * Some examples with printf* 
+ *
+ * @author Sven Schrodt<sven@schrodt.club>
+ * @link https://github.com/SchrodtSven/ApiClient
+ * @package ApiClient
+ * @version 0.1
+ * @since 2025-04-13
+ */
 use SchrodtSven\ApiClient\Frontend\Html\General;
 
 $template = "

@@ -10,9 +10,11 @@ tree -I "archive|dump|cache|phpunit"  >> README.md
 cloc . >> README.md
 # Processing unit tests and add results to README.md
 phpunit >> README.md
+
 # Sanitizing markup in README.md
 echo "</code>" >> README.md
 echo "</pre>" >> README.md
+
 # Adding, committing & pushing with message from STDIN
 git add .
 git commit -m "$1"

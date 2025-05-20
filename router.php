@@ -9,7 +9,7 @@
  * @link https://github.com/SchrodtSven/ApiClient
  * @package ApiClient
  * @version 0.2
- * @since 2025-01-11
+ * @since 2025-05-11
  */
 
  
